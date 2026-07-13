@@ -1,0 +1,497 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Yu Gothic",sans-serif;
+
+    background:
+    url(images/Image2.jpg) center/cover fixed;
+    color:#2f2fff;
+
+    margin: 0;
+    padding: 0;
+ width: 100%;
+}
+
+.page{
+    max-width:900px;
+    margin:auto;
+}
+
+/* ヘッダー */
+
+.header{
+    width: 100%;
+    height: 90px;      /* ←高さ固定 */
+    overflow: hidden;
+}
+
+.header img{
+    width: 100%;       /* ←横いっぱい */
+    height: 100%;      /* ←高さも合わせる */
+    object-fit: cover; /* ←これが超重要（縦伸び防止） */
+    display: block;
+}
+
+.header{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+.hero{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero h1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    font-size:80px;
+    color:white;
+    font-weight:300;
+    text-shadow:0 0 20px white;
+}
+
+/* ガラス風 */
+
+.glass{
+    background:rgba(255,255,255,0.18);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.15);
+}
+
+/* プロフィール */
+
+.profile-area{
+    display:grid;
+    grid-template-columns:1fr 350px;
+    gap:30px;
+
+    padding:40px;
+}
+
+.profile-card{
+    padding:30px;
+}
+
+.profile-card h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.row{
+    display:flex;
+    margin-bottom:15px;
+}
+
+.row span{
+    width:120px;
+}
+
+.row p{
+    flex:1;
+    background:rgba(255,255,255,.35);
+    padding:8px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* Favorite */
+
+.favorite-box{
+    padding:20px;
+    text-align:center;
+}
+
+.favorite-box img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.best3{
+    margin-top:20px;
+}
+
+.best3 ul{
+    list-style:none;
+}
+
+.best3 li{
+    background:rgba(255,255,255,.4);
+    padding:10px;
+    margin:10px 0;
+    border-radius:10px;
+}
+
+/* Free Space */
+
+.free-space{
+    padding:50px 40px 100px;
+}
+
+.free-space h2{
+    text-align:center;
+    color:white;
+    font-size:60px;
+    margin-bottom:50px;
+}
+
+/* ギャラリー */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.photo{
+    position:relative;
+}
+
+.photo img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+.photo img.penlight{
+    height:450px;
+}
+
+.photo video{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+}
+ss
+.photo span{
+
+    position:absolute;
+    top:-15px;
+    left:10px;
+
+    padding:10px 20px;
+
+    background:rgba(180,140,255,.5);
+
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    border-radius:30px;
+}
+
+.rotate-left{
+    transform:rotate(-4deg);
+}
+
+.rotate-right{
+    transform:rotate(4deg);
+}
+
+/* スマホ */
+
+@media(max-width:768px){
+
+    .profile-area{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        height:300px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+}
+.photo img.live{
+    height:450px;
+    object-fit:cover;
+}
+
+.footer{
+    width:100%;
+    height:90px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.footer img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* キラキラ全体 */
+.sparkle{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:9999;
+}
+
+/* 星 */
+.sparkle span{
+    position:absolute;
+    top:-50px;
+    color:#ffffff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #b8f7ff,
+        0 0 20px #7ee8ff;
+    font-size:20px;
+    animation:fall linear infinite;
+}
+
+/* 位置と時間 */
+.sparkle span:nth-child(1){
+    left:5%;
+    animation-duration:7s;
+    animation-delay:0s;
+}
+.sparkle span:nth-child(2){
+    left:15%;
+    animation-duration:9s;
+    animation-delay:2s;
+}
+.sparkle span:nth-child(3){
+    left:28%;
+    animation-duration:8s;
+}
+.sparkle span:nth-child(4){
+    left:40%;
+    animation-duration:10s;
+}
+.sparkle span:nth-child(5){
+    left:55%;
+    animation-duration:7.5s;
+}
+.sparkle span:nth-child(6){
+    left:68%;
+    animation-duration:9s;
+}
+.sparkle span:nth-child(7){
+    left:77%;
+    animation-duration:8.5s;
+}
+.sparkle span:nth-child(8){
+    left:86%;
+    animation-duration:10s;
+}
+.sparkle span:nth-child(9){
+    left:93%;
+    animation-duration:7s;
+}
+.sparkle span:nth-child(10){
+    left:50%;
+    animation-duration:11s;
+}
+
+/* アニメーション */
+@keyframes fall{
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+.page-image{
+    position: fixed;
+    right: 20px;      /* 右からの位置 */
+    bottom: 80px;     /* フッターの上に浮かせる */
+
+    width: 500px;     /* サイズ（ここ調整） */
+    height: auto;
+    
+    z-index: 999;
+
+    /* かわいくする */
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
+
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ふわふわ動く */
+@keyframes float{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-15px); }
+}
+
+.photo video{
+    transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+/* ホバーでキラキラ強化 */
+.photo video:hover{
+    transform: scale(1.08);
+
+    filter: brightness(1.2) contrast(1.1);
+
+    box-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #7ddcff,
+        0 0 40px #b3f0ff,
+        0 0 60px #e0f7ff;
+
+    animation: sparkleGlow 1.5s infinite alternate;
+}
+h2,h3{
+    background: linear-gradient(90deg,#1F5FFF,#4FAEFF,#9EE8FF,#FFFFFF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 8px rgba(79,174,255,.8),
+        0 0 18px rgba(255,255,255,.9);
+
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine{
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: 200% center;
+    }
+}
+.glass{
+    transition: all .3s ease;
+}
+
+.glass:hover{
+    transform: translateY(-8px);
+    box-shadow:
+        0 15px 40px rgba(120,190,255,.35);
+}
+.glass{
+    transition: all .3s ease;
+}
+.glass{
+    position:relative;
+    overflow:hidden;
+}
+
+.photo img{
+    transition:.35s;
+}
+
+.photo img:hover{
+    transform:scale(1.05);
+    filter:brightness(1.08);
+
+    box-shadow:
+        0 0 12px #fff,
+        0 0 25px #7ddcff;
+}
+#bunnies{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.bunny{
+    position: absolute;
+    top: -100px;
+    width: 30px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform: translateY(-100px) rotate(0deg);
+    }
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+/* プロフィールエリア内の見出し（h2, h3）以外の文字を一括で少し大きくする */
+.profile-area div, 
+.profile-area span, 
+.profile-area p, 
+.profile-area li {
+    font-size: 1.2rem; 
+    line-height: 1.7;  
+}
+/* --- りんごロゴのリンク設定 --- */
+.page-image-link {
+    position: fixed;
+    right: 20px;      /* 右からの位置 */
+    bottom: 80px;     /* フッターの上に浮かせる */
+    z-index: 999;
+    
+    /* 元の画像にかかっていたアニメーションをリンク側に移す */
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* リンクで囲んだので、元の画像の固定位置を解除してサイズだけ指定 */
+.page-image {
+    position: static; 
+    width: 500px;     /* サイズ調整 */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
+    transition: filter 0.3s ease;
+}
+
+/* りんごロゴにマウスが乗ったときの演出（さらにキラキラ光る） */
+.page-image-link:hover .page-image {
+    filter: drop-shadow(0 0 20px rgba(125, 220, 255, 0.9)) brightness(1.2);
+    cursor: pointer;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="header">
+
+    <img src="images/Image (7).jpg" alt="">
+
+</header>
+
+    <section class="hero">
+
+    <img src="images/main.png" alt="" class="hero-bg">
+　　<img src="images/logo.png" style="width:200px;">
+
+
+</section>
+    <!-- プロフィールエリア -->
+    <section class="profile-area">
+
+        <div class="profile-card glass">
+
+            <h2>好きなモノおしえて！</h2>
+<div class="profile-list">
+
+                <div class="row">
+                    <span>なまえ</span>
+                    <p>朝倉 亜未 (あさくら あみ)</p>
+                </div>
+
+                <div class="row">
+                    <span>あだ名</span>
+                    <p>あみちゃん、朝倉さん</p>
+                </div>
+
+                <div class="row">
+                    <span>誕生日</span>
+                    <p>10/9</p>
+                </div>
+
+                <div class="row">
+                    <span>血液型</span>
+                    <p>A型</p>
+                </div>
+
+                <div class="row">
+                    <span>色</span>
+                    <p>水色、ピンク</p>
+                </div>
+
+                <div class="row">
+                    <span>果物</span>
+                    <p>パイナップル</p>
+                </div>
+
+                <div class="row">
+                    <span>お酒</span>
+                    <p>柚子酒、澪</p>
+                </div>
+
+                <div class="row">
+                    <span>ゲーム</span>
+                    <p>あんスタ、スプラ</p>
+                </div>
+
+                <div class="row">
+                    <span>音楽</span>
+                    <p>Acid Black Cherry、Eden</p>
+                </div>
+
+                <div class="row">
+                    <span>アニメ</span>
+                    <p>ガーリッシュナンバー</p>
+                </div>
+
+            </div>
+           
+        </div>
+
+        <!-- Favorite -->
+        <div class="favorite-box glass">
+
+            <img src="images/favorite.jpg" alt="">
+
+            <h2>なりたい顔</h2>
+
+            <div class="best3">
+
+                <h3>BEST3</h3>
+
+               <ul>
+                    <li>3. 川崎桜(乃木坂)</li>
+                    <li>2. 荒木飛羽(俳優)</li>
+                    <li>1. 横浜流星(俳優)</li>
+               </ul>
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Free Space -->
+    <section class="free-space">
+
+        <h2>Free Space</h2>
+
+        <div class="gallery">
+
+        <div class="photo rotate-left">
+    <img src="images/imagesphoto1.png" class="live">
+   
+        </div>
+
+            <div class="photo rotate-right">
+                <img src="images/53f78a11-e93c-46fc-a8f4-b58933ce1b68.png" class="penlight">
+                
+            </div>
+
+            <div class="photo rotate-left">
+                <img src="images/Image22.jpg">
+                
+            </div>
+
+            <div class="photo rotate-right">
+                <video src="images/MicrosoftTeams-video.mp4" controls></video>
+                
+
+
+            </div>
+
+            <div class="photo rotate-left">
+                <img src="images/Image (20).jpg">
+                
+            </div>
+
+            <div class="photo rotate-right">
+                <img src="images/Image 30.jpg">
+               
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- キラキラ -->
+<div class="sparkle">
+  <span>★</span>
+  <span>☆</span>
+  <span>★</span>
+  <span>☆</span>
+  <span>★</span>
+  <span>☆</span>
+  <span>★</span>
+  <span>★</span>
+  <span>★</span>
+  <span>☆</span>
+</div>
+
+<script>
+function createBunny(){
+
+    const bunny = document.createElement("img");
+    bunny.src = "images/Image (27).png";
+
+    bunny.className = "bunny";
+
+    bunny.style.left = Math.random() * 100 + "vw";
+
+    // 少し大きめ
+    const size = 70 + Math.random() * 30;
+    bunny.style.width = size + "px";
+
+    // ゆっくり落ちる（8～14秒）
+    bunny.style.animationDuration = (8 + Math.random() * 6) + "s";
+
+    document.getElementById("bunnies").appendChild(bunny);
+
+    setTimeout(() => {
+        bunny.remove();
+    }, 15000);
+}
+
+setInterval(createBunny, 1000);
+</script>
+<div id="bunnies"></div>
+
+<a href="#" class="page-image-link">
+    <img src="images/logo.png" class="page-image" alt="ホームページ">
+</a>
+
+
+<footer class="footer">
+    <img src="images/Image (7).jpg" alt="Footer">
+</footer>
+
+</body>
+</html>
