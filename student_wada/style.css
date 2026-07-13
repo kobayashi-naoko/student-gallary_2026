@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background-image: url(images/yumekawa.png); /* ここをimagesに修正 */
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+
+h1 {
+  background-color: #b8f8fb;
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 60px;
+}
+
+h1 img {
+  width: 45px;
+  float: right;
+}
+
+p img {
+  width: 300px;
+}
+
+.speech {
+  position: relative;
+  width: 450px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  margin-top: -150px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.speech::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 150px;
+  margin-left: 300px;
+}
+
+.hobby {
+  padding: 50px;
+}
+
+.hobby h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.hobby-images {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.hobby-images img {
+  width: calc(33.3% - 14px);
+  height: 200px;
+  object-fit: cover;
+}
+
+.hobby-images a {
+  display: block;
+}
+
+.hobby-images a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hobby-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hobby-content img {
+  width: 380px;
+  height: 219px;
+  object-fit: cover;
+}
+
+.hobby-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hobby-text p {
+  color: #372e82;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.skill{
+    padding:50px;
+}
+
+.skill h2{
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.skill-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.skill-left{
+    width:55%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.skill-box img{
+    width:100%;
+    border-radius:10px;
+}
+
+.skill-box p{
+    text-align:center;
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.skill-right{
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.skill-right p{
+    color:#372e82;
+    font-size:2rem;
+    line-height:1.8;
+    text-align:center;
+}
+
+.skill-right img{
+    width:100%;
+    margin-top:30px;
+}
